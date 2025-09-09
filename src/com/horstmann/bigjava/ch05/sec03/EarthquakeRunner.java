@@ -17,4 +17,3 @@ public class EarthquakeRunner
       System.out.println(quake.getDescription());
    }
 }
-

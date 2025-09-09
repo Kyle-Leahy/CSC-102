@@ -65,4 +65,3 @@ public class BankAccount {
         System.out.println("Jane's Account is currently: " + janesAccount.getBalance());
     }
 }
-
