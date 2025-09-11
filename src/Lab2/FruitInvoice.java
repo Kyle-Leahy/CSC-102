@@ -1,6 +1,6 @@
 package Lab2;
 /**
- * Class declaring my FruitInvoice so I can hard-code the answer
+ * Class declaring my FruitInvoice class so I can hard-code the answer
  * @author Kyle Leahy
  */
 public class FruitInvoice {
