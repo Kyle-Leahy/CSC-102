@@ -12,12 +12,11 @@ public class NumberGuessingGame {
         int guess = answer.nextInt(100);
         int tries = 0;
         do {
-            if (guess == -1){break;}
-            if (in.nextInt() > guess) {System.out.println("Too high, guess again");}
-            if (in.nextInt() < guess) {System.out.println("Too low ! Try again!");}
-            else {System.out.println("You're right! Good job it took you " + tries + " tries");}
-            ++tries;
+            if (in.nextInt() == -1) {System.out.println("Ending program...");break;}
+            if (in.nextInt() > guess) {System.out.println("Too high, guess again.");}
+            else if (in.nextInt() < guess) {System.out.println("Too low! Try again!");}
+            else {System.out.println("You're right! Good job it took you " + tries + " tries.");break;}
+            tries++;
         }while (in.hasNextInt());
-
     }
 }
