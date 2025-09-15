@@ -8,7 +8,7 @@ public class FruitInvoice {
 
         String guava = "Guava", apple = "Apple";
         int guavaQuantity = 3, appleQuantity = 8;
-        double guavaPrice = 0.98, applePrice = 0.27;
+        double guavaPrice = 0.98, applePrice = 0.27; // initialized some info for hard-coding the UI
         double taxRate = 0.0825;
         double guavaSubTotal = (guavaPrice*guavaQuantity), appleSubTotal = (applePrice*appleQuantity);
         double guavaTotal = (guavaSubTotal*taxRate),  appleTotal = (appleSubTotal*taxRate);

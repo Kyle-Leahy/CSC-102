@@ -6,7 +6,7 @@ public class OneWayTempConverter {
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter the temperature you want converted from Fahrenheit to Celsius:");
         double fTemp = in.nextDouble();
-        double cTemp = (fTemp-32)*((double)5/9);
+        double cTemp = (fTemp-32)*((double)5/9); // Proper conversion for Fahrenheit to Celsius
         System.out.println("Your temperature in Celsius is: ");
         System.out.printf("%.2f",cTemp);
     }
