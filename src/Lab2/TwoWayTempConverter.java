@@ -16,7 +16,7 @@ public class TwoWayTempConverter {
                 System.out.println("\nPlease enter the temperature you want converted from Fahrenheit to Celsius:");
                 double fTemp = in.nextDouble();
                 double cTemp = (fTemp - 32) * ((double) 5 / 9);
-                System.out.print("Your temperature in Celsius is: ");
+                System.out.print("Your temperature in Celsius is: "); // same code as OneWayTempConverter
                 System.out.printf("%.2f", cTemp);
                 System.out.println("\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit");
                 menuChoice = in.nextDouble();
