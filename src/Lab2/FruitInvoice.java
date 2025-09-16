@@ -1,8 +1,5 @@
 package Lab2;
-/**
- * Class declaring my FruitInvoice class so I can hard-code the answer
- * @author Kyle Leahy
- */
+// Kyle Leahy 102H
 public class FruitInvoice {
     public static void main(String[] args) {
 

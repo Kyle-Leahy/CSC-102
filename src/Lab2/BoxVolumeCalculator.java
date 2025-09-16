@@ -1,7 +1,7 @@
 package Lab2;
 import java.util.Scanner;
 
-public class BoxVolumeCalculator {
+public class BoxVolumeCalculator { // Kyle Leahy 102H
     public static double length;
     public static double width; // straight forward assignments
     public static double height;

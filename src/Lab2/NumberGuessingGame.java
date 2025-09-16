@@ -2,7 +2,7 @@ package Lab2;
 import java.util.Scanner;
 import java.util.Random;
 
-public class NumberGuessingGame {
+public class NumberGuessingGame { // Kyle Leahy 102H
     public static void main(String[] args) {
         Random numGen = new Random(); // Random number generator 'numGen'
         Scanner in = new Scanner(System.in);

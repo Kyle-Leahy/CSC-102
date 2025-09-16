@@ -1,7 +1,7 @@
 package Lab2;
 import java.util.Scanner;
 
-public class OneWayTempConverter {
+public class OneWayTempConverter { // Kyle Leahy 102H
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter the temperature you want converted from Fahrenheit to Celsius:");
