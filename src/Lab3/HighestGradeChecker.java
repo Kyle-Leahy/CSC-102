@@ -8,7 +8,7 @@ public class HighestGradeChecker {
         int highestSoFar = 0;
         String inquiry;
         do{
-            inquiry = JOptionPane.showInputDialog("Enter your top 10 grades to see them averaged and evaluated.");15
+            inquiry = JOptionPane.showInputDialog("Enter your top 10 grades to see them averaged and evaluated.");
             grade = Integer.parseInt(inquiry);
             if(grade > highestSoFar) {
                 grade = highestSoFar;
