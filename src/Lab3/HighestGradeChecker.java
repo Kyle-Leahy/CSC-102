@@ -7,6 +7,7 @@ public class HighestGradeChecker {
         double total = 0, grade, gradeAverage, j = 1, highestSoFar = 0, lowestSoFar = 100;
         String inquiry;
         ArrayList<Double> checker = new ArrayList<>();
+        JOptionPane.showMessageDialog(null,"~~Kyle Leahy~~\n~~CSC-102H~~\n~~9/18/2025~~");
         String gradeAmount = JOptionPane.showInputDialog(null,"How many grades are you trying to enter?");
         int answer = Integer.parseInt(gradeAmount);
         for (int i = 0; i < answer; i++) {
