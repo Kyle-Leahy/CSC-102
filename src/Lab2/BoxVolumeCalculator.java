@@ -2,9 +2,7 @@ package Lab2;
 import java.util.Scanner;
 
 public class BoxVolumeCalculator { // Kyle Leahy 102H
-    public static double length;
-    public static double width; // straight forward assignments
-    public static double height;
+    public static double length, width, height;
     public static boolean Status = true; // this is going to be our goalkeeper deciding if someone wants to stay
     public double getVolume(){return length * width * height;}
 
@@ -27,7 +25,7 @@ public class BoxVolumeCalculator { // Kyle Leahy 102H
             System.out.println("\nIf you want to exit, again you may input -1. " +
                     "OR to continue please input any other number");
             if (in.nextDouble() == -1){break;}
-            else {Status = true;}
+            else Status = true;
         }while(Status);
     }
 }
