@@ -40,8 +40,7 @@ public class GradeEvaluation {
             else if (grade < lowestSoFar) {lowestSoFar = grade;}
             GradeEvaluation.checker.add(grade);
             total = total + grade;
-            j++;
-        }
+            j++;}
     }
     /**
      * Retrieves the highest number evaluated so far
