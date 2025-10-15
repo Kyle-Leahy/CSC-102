@@ -1,7 +1,7 @@
 package Lab4;
 
 public class CheckingAccount implements Banking{
-    //boolean overdraft = true;
+    boolean overdraft = false;
     double fee = 50.0; //$50 overdraft fee apart of Kyles Premium Banking
     double balance;
     // implemented methods
@@ -13,9 +13,11 @@ public class CheckingAccount implements Banking{
     public double deposit(double amount){
         balance = balance + amount;
         return amount;}
+    // Checking Account specific methods
     public void overdraftCharge(boolean overdraft){
         if(overdraft = true){
             balance = balance + fee;
         }
     }
+
 }

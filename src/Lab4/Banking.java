@@ -14,7 +14,7 @@ public interface Banking {
      * @param rate The given rate of interest/ monthly fee depending on the account.
      * @return The monthly rate of the account type.
      */
-    double rate = 20.85; //$20 monthly fee charge from Kyle's Premium Banking INC.
+    double rate = 20.85;//$20 monthly fee charge from Kyle's Premium Banking INC.
     double withdraw(double amount);
     double deposit(double amount);
     double checkBalance();
