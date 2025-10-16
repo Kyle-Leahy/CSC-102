@@ -1,0 +1,6 @@
+JohnAdams
+Ilovejava
+CheckingAccount
+2809.79
+SavingsAccount
+5844.22
