@@ -1,5 +1,5 @@
 JohnAdams
-Ilovejava
+IloveJava
 CheckingAccount
 2809.79
 SavingsAccount
