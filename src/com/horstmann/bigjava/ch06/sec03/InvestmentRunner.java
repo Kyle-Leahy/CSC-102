@@ -14,7 +14,7 @@ public class InvestmentRunner
       Investment invest = new Investment(INITIAL_BALANCE, RATE);
       invest.waitYears(YEARS);
       double balance = invest.getBalance();
-      System.out.printf("The balance after %d years is %.2f%n", 
+      System.out.printf("The savingsBalance after %d years is %.2f%n",
             YEARS, balance);
    }   
 }

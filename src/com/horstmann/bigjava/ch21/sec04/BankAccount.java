@@ -3,7 +3,7 @@ package com.horstmann.bigjava.ch21.sec04;
 import java.io.Serializable;
 
 /**
-   A bank account has a balance that can be changed by 
+   A bank account has a savingsBalance that can be changed by
    deposits and withdrawals.
 */
 public class BankAccount implements Serializable
@@ -12,7 +12,7 @@ public class BankAccount implements Serializable
    private double balance;
 
    /**
-      Constructs a bank account with a zero balance.
+      Constructs a bank account with a zero savingsBalance.
       @param anAccountNumber the account number for this account
    */
    public BankAccount(int anAccountNumber)
@@ -22,9 +22,9 @@ public class BankAccount implements Serializable
    }
 
    /**
-      Constructs a bank account with a given balance.
+      Constructs a bank account with a given savingsBalance.
       @param anAccountNumber the account number for this account
-      @param initialBalance the initial balance
+      @param initialBalance the initial savingsBalance
    */
    public BankAccount(int anAccountNumber, double initialBalance)
    {   
@@ -62,8 +62,8 @@ public class BankAccount implements Serializable
    }
 
    /**
-      Gets the current balance of the bank account.
-      @return the current balance
+      Gets the current savingsBalance of the bank account.
+      @return the current savingsBalance
    */
    public double getBalance()
    {   

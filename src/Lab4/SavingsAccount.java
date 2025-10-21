@@ -7,36 +7,36 @@ package Lab4;
  */
 public class SavingsAccount implements Banking{
     private double rate = 0.08; //High savings interest with KPB Inc.
-    public double balance;
+    public double savingsBalance;
 
     /**
-     * The method allowing access into the balance of the account
-     * @return The accounts current balance.
+     * The method allowing access into the savingsBalance of the account
+     * @return The accounts current savingsBalance.
      */
-    public double checkBalance() {return balance;}
+    public double checkBalance() {return savingsBalance;}
 
     /**
      * This method handles the monthly interest payout of the Savings Account
-     * @return The accounts balance after the fee processed.
+     * @return The accounts savingsBalance after the fee processed.
      */
     public double monthlyProcessing(){
-        balance = balance * rate;
-        return balance;
+        savingsBalance = savingsBalance * rate;
+        return savingsBalance;
     }
 
     /**
      * This is a withdrawal method to the account
-     * @return The new balance after the amount has been subtracted.
+     * @return The new savingsBalance after the amount has been subtracted.
      */
     public double withdraw(double amount){
-        balance = balance - amount;
-        return amount;}
+        savingsBalance = savingsBalance - amount;
+        return savingsBalance;}
 
     /**
      * This is a self-explanatory deposit method to the account
-     * @return The new balance after the amount has been added.
+     * @return The new savingsBalance after the amount has been added.
      */
     public double deposit(double amount){
-        balance = balance + amount;
-        return amount;}
+        savingsBalance = savingsBalance + amount;
+        return savingsBalance;}
 }

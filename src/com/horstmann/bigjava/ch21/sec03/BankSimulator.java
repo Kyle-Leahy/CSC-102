@@ -31,7 +31,7 @@ public class BankSimulator
             {
                account = data.read(position);
                account.deposit(amount);
-               System.out.println("New balance: " + account.getBalance());
+               System.out.println("New savingsBalance: " + account.getBalance());
             }
             else // Add account
             {  

@@ -14,7 +14,7 @@ public class MeasurableTester
       accounts[2] = new BankAccount(2000);
 
       double averageBalance = Data.average(accounts);
-      System.out.println("Average balance: " + averageBalance);
+      System.out.println("Average savingsBalance: " + averageBalance);
       System.out.println("Expected: 4000");
 
       // Calling the average method with an array of Country objects

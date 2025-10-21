@@ -36,7 +36,7 @@ public class InvestmentViewer1
             // from the surrounding block
             double interest = account.getBalance() * INTEREST_RATE / 100;
             account.deposit(interest);
-            System.out.println("balance: " + account.getBalance());
+            System.out.println("savingsBalance: " + account.getBalance());
          }            
       }
      

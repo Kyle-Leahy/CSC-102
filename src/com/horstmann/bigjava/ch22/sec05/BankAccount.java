@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
-   A bank account has a balance that can be changed by 
+   A bank account has a savingsBalance that can be changed by
    deposits and withdrawals.
 */
 public class BankAccount
@@ -15,7 +15,7 @@ public class BankAccount
    private Condition sufficientFundsCondition;
 
    /**
-      Constructs a bank account with a zero balance.
+      Constructs a bank account with a zero savingsBalance.
    */
    public BankAccount()
    {
@@ -35,7 +35,7 @@ public class BankAccount
       {
          System.out.print("Depositing " + amount);
          double newBalance = balance + amount;
-         System.out.println(", new balance is " + newBalance);
+         System.out.println(", new savingsBalance is " + newBalance);
          balance = newBalance;
          sufficientFundsCondition.signalAll();
       }
@@ -61,7 +61,7 @@ public class BankAccount
          }
          System.out.print("Withdrawing " + amount);
          double newBalance = balance - amount;
-         System.out.println(", new balance is " + newBalance);
+         System.out.println(", new savingsBalance is " + newBalance);
          balance = newBalance;
       }
       finally
@@ -71,8 +71,8 @@ public class BankAccount
    }
    
    /**
-      Gets the current balance of the bank account.
-      @return the current balance
+      Gets the current savingsBalance of the bank account.
+      @return the current savingsBalance
    */
    public double getBalance()
    {

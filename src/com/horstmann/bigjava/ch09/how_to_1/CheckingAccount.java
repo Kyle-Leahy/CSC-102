@@ -8,7 +8,7 @@ public class CheckingAccount extends BankAccount
    private int withdrawals;
 
    /**
-      Constructs a checking account with a zero balance.
+      Constructs a checking account with a zero savingsBalance.
    */
    public CheckingAccount()
    {

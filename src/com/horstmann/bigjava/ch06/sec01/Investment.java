@@ -11,9 +11,9 @@ public class Investment
    private int year;
 
    /**
-      Constructs an Investment object from a starting balance and
+      Constructs an Investment object from a starting savingsBalance and
       interest rate.
-      @param aBalance the starting balance
+      @param aBalance the starting savingsBalance
       @param aRate the interest rate in percent
    */
    public Investment(double aBalance, double aRate)
@@ -24,9 +24,9 @@ public class Investment
    }
 
    /**
-      Keeps accumulating interest until a target balance has
+      Keeps accumulating interest until a target savingsBalance has
       been reached.
-      @param targetBalance the desired balance
+      @param targetBalance the desired savingsBalance
    */
    public void waitForBalance(double targetBalance)
    {
@@ -39,8 +39,8 @@ public class Investment
    }
 
    /**
-      Gets the current investment balance.
-      @return the current balance
+      Gets the current investment savingsBalance.
+      @return the current savingsBalance
    */
    public double getBalance()
    {

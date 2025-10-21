@@ -43,9 +43,9 @@ public class Bank
    }
 
    /**
-      Gets the balance of a bank account.
+      Gets the savingsBalance of a bank account.
       @param accountNumber the account number
-      @return the account balance
+      @return the account savingsBalance
    */
    public double getBalance(int accountNumber)
    {

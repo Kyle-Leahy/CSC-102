@@ -1,7 +1,7 @@
 package com.horstmann.bigjava.ch09.how_to_1;
 
 /**
-   A savings account earns interest on the minimum balance.
+   A savings account earns interest on the minimum savingsBalance.
 */
 public class SavingsAccount extends BankAccount
 {
@@ -9,7 +9,7 @@ public class SavingsAccount extends BankAccount
    private double minBalance; 
 
    /**
-      Constructs a savings account with a zero balance.
+      Constructs a savings account with a zero savingsBalance.
    */
    public SavingsAccount()
    {

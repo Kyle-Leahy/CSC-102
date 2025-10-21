@@ -29,7 +29,7 @@ public class InvestmentViewer2
       BankAccount account = new BankAccount(INITIAL_BALANCE);
 
       // The label for displaying the results
-      JLabel label = new JLabel("balance: " + account.getBalance());
+      JLabel label = new JLabel("savingsBalance: " + account.getBalance());
 
       // The panel that holds the user interface components
       JPanel panel = new JPanel();
@@ -43,7 +43,7 @@ public class InvestmentViewer2
          {
             double interest = account.getBalance() * INTEREST_RATE / 100;
             account.deposit(interest);
-            label.setText("balance: " + account.getBalance());
+            label.setText("savingsBalance: " + account.getBalance());
          }            
       }
 

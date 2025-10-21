@@ -7,44 +7,44 @@ package Lab4;
  */
 public class CheckingAccount implements Banking{
     private static double rate = 20.0, overdraftFee = 40.0; //$20 monthly fee included in Kyles Premium Banking
-    public double balance;
+    public double checkingBalance;
 
     /**
-     * The method allowing access into the balance of the account
-     * @return The accounts current balance.
+     * The method allowing access into the savingsBalance of the account
+     * @return The accounts current savingsBalance.
      */
-    public double checkBalance() {return balance;}
+    public double checkBalance() {return checkingBalance;}
 
     /**
      * This method handles the monthly fee of the Checking Account
-     * @return The accounts balance after the fee processed.
+     * @return The accounts savingsBalance after the fee processed.
      */
     public double monthlyProcessing() {
-        balance = balance - rate;
-        return balance;}
+        checkingBalance = checkingBalance - rate;
+        return checkingBalance;}
 
     /**
      * This is a self-explanatory withdrawal method to the account
-     * @return The new balance after the amount has been subtracted.
+     * @return The new savingsBalance after the amount has been subtracted.
      */
     public double withdraw(double amount){
-        balance = balance - amount;
-        return amount;}
+        checkingBalance = checkingBalance - amount;
+        return checkingBalance;}
 
     /**
      * This is a self-explanatory deposit method to the account
-     * @return The new balance after the amount has been added.
+     * @return The new savingsBalance after the amount has been added.
      */
     public double deposit(double amount){
-        balance = balance + amount;
-        return amount;}
+        checkingBalance = checkingBalance + amount;
+        return checkingBalance;}
     //Specific methods
 
     /**
      * The method responsible for handling the overdraft fee charge
-     * @return The new balance after the pesky fee.
+     * @return The new savingsBalance after the pesky fee.
      */
     public double overdraftCharge(){
-        balance = balance - overdraftFee;
-        return balance;}
+        checkingBalance = checkingBalance - overdraftFee;
+        return checkingBalance;}
 }

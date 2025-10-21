@@ -1,7 +1,7 @@
 package com.horstmann.bigjava.ch09.how_to_1;
 
 /**
-   A bank account has a balance and a mechanism for applying interest or fees at 
+   A bank account has a savingsBalance and a mechanism for applying interest or fees at
    the end of the month.
 */
 public class BankAccount
@@ -9,7 +9,7 @@ public class BankAccount
    private double balance;
 
    /**
-      Constructs a bank account with zero balance.
+      Constructs a bank account with zero savingsBalance.
    */
    public BankAccount()
    {
@@ -44,8 +44,8 @@ public class BankAccount
    }
    
    /**
-      Gets the current balance of this bank account.
-      @return the current balance
+      Gets the current savingsBalance of this bank account.
+      @return the current savingsBalance
    */
    public double getBalance()
    {

@@ -16,7 +16,7 @@ public class MeasurerTester
 
       double averageBalance = Data.average(accounts,
          (Object obj) -> ((BankAccount) obj).getBalance());
-      System.out.println("Average balance: " + averageBalance);
+      System.out.println("Average savingsBalance: " + averageBalance);
       System.out.println("Expected: 4000");
 
       Rectangle[] rects = new Rectangle[] 

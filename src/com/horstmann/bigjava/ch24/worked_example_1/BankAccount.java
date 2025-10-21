@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
-   A bank account has a balance that can be changed by 
+   A bank account has a savingsBalance that can be changed by
    deposits and withdrawals.
 */
 public class BankAccount
@@ -14,7 +14,7 @@ public class BankAccount
    private int accountNumber;
 
    /**
-      Constructs a bank account with a given balance.
+      Constructs a bank account with a given savingsBalance.
       @param anAccountNumber the account number
    */
    public BankAccount(int anAccountNumber)
@@ -61,8 +61,8 @@ public class BankAccount
    }
 
    /**
-      Gets the balance of a bank account.
-      @return the account balance
+      Gets the savingsBalance of a bank account.
+      @return the account savingsBalance
    */
    public double getBalance()
          throws SQLException

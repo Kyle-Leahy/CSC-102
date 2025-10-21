@@ -1,6 +1,4 @@
 JohnAdams
-IloveJava
-CheckingAccount
-2809.79
-SavingsAccount
-5844.22
+ILoveJava
+2398.55
+8755.02

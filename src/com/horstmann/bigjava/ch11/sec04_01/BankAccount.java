@@ -1,7 +1,7 @@
 package com.horstmann.bigjava.ch11.sec04_01;
 
 /**
-   A bank account has a balance that can be changed by 
+   A bank account has a savingsBalance that can be changed by
    deposits and withdrawals.
 */
 public class BankAccount
@@ -9,7 +9,7 @@ public class BankAccount
    private double balance;
 
    /**
-      Constructs a bank account with a zero balance.
+      Constructs a bank account with a zero savingsBalance.
    */
    public BankAccount()
    {   
@@ -17,8 +17,8 @@ public class BankAccount
    }
 
    /**
-      Constructs a bank account with a given balance.
-      @param initialBalance the initial balance
+      Constructs a bank account with a given savingsBalance.
+      @param initialBalance the initial savingsBalance
    */
    public BankAccount(double initialBalance)
    {   
@@ -42,14 +42,14 @@ public class BankAccount
    {   
       if (amount > balance)
       {
-         throw new IllegalArgumentException("Amount exceeds balance");
+         throw new IllegalArgumentException("Amount exceeds savingsBalance");
       }
       balance = balance - amount;
    }
 
    /**
-      Gets the current balance of the bank account.
-      @return the current balance
+      Gets the current savingsBalance of the bank account.
+      @return the current savingsBalance
    */
    public double getBalance()
    {   

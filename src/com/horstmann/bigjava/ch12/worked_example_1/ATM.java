@@ -111,9 +111,9 @@ public class ATM
    }
 
    /** 
-      Gets the balance of the current account. 
+      Gets the savingsBalance of the current account.
       (Precondition: state is TRANSACT)
-      @return the balance
+      @return the savingsBalance
    */
    public double getBalance()
    {  

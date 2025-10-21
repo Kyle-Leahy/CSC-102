@@ -48,7 +48,7 @@ public class InvestmentFrame2 extends JFrame
    }
 
    /**
-      Adds interest to the balance and updates the display.
+      Adds interest to the savingsBalance and updates the display.
    */
    class AddInterestListener implements ActionListener
    {

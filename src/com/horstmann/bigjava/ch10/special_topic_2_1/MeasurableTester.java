@@ -17,7 +17,7 @@ public class MeasurableTester
       accounts[2] = new BankAccount(2000);
 
       double averageBalance = Measurable.average(accounts);
-      System.out.println("Average balance: " + averageBalance);
+      System.out.println("Average savingsBalance: " + averageBalance);
       System.out.println("Expected: 4000");
 
       // Calling the static average method
