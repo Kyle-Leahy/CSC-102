@@ -9,7 +9,7 @@ public class Permutations
 {
    public static void main(String[] args)
    {
-      for (String s : permutations("eat"))
+      for (String s : permutations("sauce"))
       {         
          System.out.println(s);
       }
