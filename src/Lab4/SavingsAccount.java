@@ -6,7 +6,7 @@ package Lab4;
  * @version 1.0
  */
 public class SavingsAccount implements Banking{
-    private double rate = 0.08; //High savings interest with KPB Inc.
+    private double rate = 1.08; //High savings interest with KPB Inc.
     public double savingsBalance;
 
     /**
