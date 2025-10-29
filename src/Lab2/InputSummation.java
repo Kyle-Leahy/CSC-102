@@ -12,14 +12,15 @@ public class InputSummation {
     return (sum);}                                        // answer and increment, adding +1 to the sum every time
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        InputSummation calculator = new InputSummation();
-        do {
-            System.out.println("\nPlease enter a number that you want all numbers leading to it summed up. " +
-                    "\nIf you want to quit, type -1!");
-            Answer = in.nextInt();
-            if(Answer == -1){break;}
-            System.out.println(calculator.getSum());
-        }while(Status);
+        try (Scanner in = new Scanner(System.in)) {
+            InputSummation calculator = new InputSummation();
+            do {
+                System.out.println("\nPlease enter a number that you want all numbers leading to it summed up. " +
+                        "\nIf you want to quit, type -1!");
+                Answer = in.nextInt();
+                if(Answer == -1){break;}
+                System.out.println(calculator.getSum());
+            }while(Status);
+        }
     }
 }

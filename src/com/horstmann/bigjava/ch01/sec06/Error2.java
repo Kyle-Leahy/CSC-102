@@ -1,4 +1,4 @@
-package edu.sunyorange.bjeo.ch01.sec06;
+package com.horstmann.bigjava.ch01.sec06;
 
 public class Error2
 {

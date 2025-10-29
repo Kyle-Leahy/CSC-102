@@ -16,8 +16,8 @@ public class BankAccount {
         return balance;
     }
 
-    private void calculateInterest() {
-        balance = balance * 1.05;
+    private void calculateInterest(double rate) {
+        balance = balance * rate;
     }
 
     public static void main(String args[]) {
@@ -32,6 +32,9 @@ public class BankAccount {
 
         bobsAccount.deposit(412.23);
         janesAccount.withdrawal(142.56);
+
+        bobsAccount.calculateInterest(1.08);
+        janesAccount.calculateInterest(1.08);
 
         System.out.println("Bob's Account is currently: " + bobsAccount.getBalance());
         System.out.println("Jane's Account is currently: " + janesAccount.getBalance());
