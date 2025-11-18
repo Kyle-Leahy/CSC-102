@@ -26,31 +26,27 @@ public class RecursionTester {
                             int f = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number to find the factorial:"));
                             JOptionPane.showMessageDialog(null, NumericalUtility.getFactorial(f));
                         }catch(NumberFormatException e){
-                            JOptionPane.showMessageDialog(null, "Please enter a number.");
-                        }
+                            JOptionPane.showMessageDialog(null, "Please enter a number.");}
                     }else if (menu == 2) {
                         try {
                             int n = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number for the base of the exponent:"));
                             int m = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number for the exponent:"));
                             JOptionPane.showMessageDialog(null, NumericalUtility.getNPowerM(n,m));
                         }catch(NumberFormatException e){
-                            JOptionPane.showMessageDialog(null, "Please enter a number.");
-                        }
+                            JOptionPane.showMessageDialog(null, "Please enter a number.");}
                     }else if (menu == 3) {
                         try {
                             int sum = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number to find the summation:"));
                             JOptionPane.showMessageDialog(null, NumericalUtility.getSummation(sum));
                         }catch(NumberFormatException e){
-                            JOptionPane.showMessageDialog(null, "Please enter a number.");
-                        }
+                            JOptionPane.showMessageDialog(null, "Please enter a number.");}
                     }else if (menu == 4) {
                         try {
                             int first = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the first number to find a GCD."));
                             int second = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the second number to find a GCD with "+first+"."));
                             JOptionPane.showMessageDialog(null, NumericalUtility.getGCD(first,second));
                         }catch(NumberFormatException e){
-                            JOptionPane.showMessageDialog(null, "Please enter a number.");
-                        }
+                            JOptionPane.showMessageDialog(null, "Please enter a number.");}
                     }else if (menu == 5) {
                         try {
                             int fib = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter a number to find the fibonacci sequence:"));
@@ -59,14 +55,12 @@ public class RecursionTester {
                                 System.out.println("fib(" + i + ") = " + f);// Spamming JOptionPane windows would be annoying for the user lol.
                             }
                         }catch(NumberFormatException e){
-                            JOptionPane.showMessageDialog(null, "Please enter a number.");
-                        }
+                            JOptionPane.showMessageDialog(null, "Please enter a number.");}
                     }else
                         JOptionPane.showMessageDialog(null, "Please enter the number of a menu choice!");
                 } while (!flag);
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "That's not a menu option!");
-            }
+                JOptionPane.showMessageDialog(null, "That's not a menu option!");}
         }while(!flag);
     }
 }
