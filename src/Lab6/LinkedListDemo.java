@@ -1,7 +1,5 @@
 package Lab6;
 import javax.swing.*;
-import java.util.LinkedList;
-import java.util.Iterator;
 
 public class LinkedListDemo {
 
@@ -14,26 +12,28 @@ public class LinkedListDemo {
     }
 
     class Node{ //Inner Node Class
-        public Integer data; //Number within the node
+        public int data; //Number within the node
         public Node next; //Pointer to next node
 
-        public Node(Integer data){
+        public Node(int data){
             this.data = data;
             this.next = null;
         }
-        public Node(Integer data, Node next){
+        public Node(int data, Node next){
             this.data = data;
             this.next = next;
         }
     }
 
-    public void addFirst(Integer answer){
+    public void addFirst(int answer){
         Node newNode = new Node(answer,first);
+        newNode.data = answer;
+        newNode.next = first;
         first = newNode;
         size++;
     }
 
-    public void addLast(Integer answer){
+    public void addLast(int answer){
         Node newNode = new Node(answer,null);
         if(size == 0){
             first = newNode;
@@ -43,12 +43,23 @@ public class LinkedListDemo {
     }
 
     public void removeFirst(){
+        try{
+            int data = first.data;
+            first = first.next;
+            size--;
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage(),"There is no first Node!",JOptionPane.ERROR_MESSAGE);
+        }
     }
+
+
 
     public static void  main(String[] args) {
         LinkedListDemo NumList = new LinkedListDemo();
         JOptionPane.showInputDialog(null,"");
         NumList.addFirst(67);
         NumList.addLast(41);
+        NumList.removeFirst();
+        System.out.println(NumList.size);
     }
 }
