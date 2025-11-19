@@ -1,26 +1,21 @@
 package Lab6;
 import javax.swing.*;
-import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
 public class LinkedListDemo {
-
-    private Node first; //First node in the list (head)
-    private int size; //Size of the linked list
+    private static Node first; //First node in the list (head)
+    private static int size; //Size of the linked list
 
     public LinkedListDemo() { //Constructor for the single linked list
         first = null;
         size = 0;
-
     }
-
-    static class Node { //Inner Node Class
-        public Object data; //Number within the node
-        public Node next; //Pointer to next node
+    public static class Node { //Inner Node Class
+        int data; //Number within the node
+        Node next; //Pointer to next node
 
         public Node(int data) {
             this.data = data;
-            this.next = null;
         }
 
         public Node(int data, Node next) {
@@ -29,12 +24,8 @@ public class LinkedListDemo {
         }
     }
 
-    public ListIterator listIterator() {
 
-        return new LinkedListIterator();
-    }
-
-    class LinkedListIterator implements ListIterator {
+    static class LinkedListIterator implements ListIteratorClass {
         private Node current;
         private Node previous;
         private boolean isAfterNext;
@@ -43,48 +34,23 @@ public class LinkedListDemo {
             current = null;
             previous = null;
             isAfterNext = false;
+
         }
 
+        @Override
         public boolean hasNext() {
-            if (current == null) {
-                return first != null;
-            } else {
-                return current.next != null;
-            }
+            return current.next != null;
         }
 
-        public Object next() {
+        @Override
+        public int next() {
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
             previous = current;
-            isAfterNext = true;
-            if (current == null) {
-                current = first;
-            } else {
-                current = current.next;
-            }
+            //isAfterNext = true;
+            current = current.next;
             return current.data;
-        }
-
-        @Override
-        public boolean hasPrevious() {
-            return false;
-        }
-
-        @Override
-        public Object previous() {
-            return null;
-        }
-
-        @Override
-        public int nextIndex() {
-            return 0;
-        }
-
-        @Override
-        public int previousIndex() {
-            return 0;
         }
 
         public void remove() {
@@ -100,94 +66,94 @@ public class LinkedListDemo {
             isAfterNext = false;
         }
 
-        @Override
-        public void set(Object o) {
-
-        }
-
-        @Override
-        public void add(Object o) {
-
-        }
-
         public void add(int answer){
             if (current == null) {
                 addFirst(answer);
                 current = first;
             }else{
-                Node newNode = new Node(answer, current.next);
-                current = newNode;
+                current = new Node(answer, current.next);
             }
             isAfterNext = false;
         }
-    }
 
-    public void addFirst(int answer) {
-        Node newNode = new Node(answer, first);
-        newNode.data = answer;
-        newNode.next = first;
-        first = newNode;
-        size++;
-    }
-
-    public void addLast(int answer) {
-        Node newNode = new Node(answer, null);
-        if (size == 0) {
-            first = newNode;
-        } else if (size >= 1) {
-            first.next = newNode;
-        }
-        size++;
-    }
-
-    public void removeFirst() {
-        first.data = null;
-        first = first.next;
-        size--;
-    }
-
-    public void removeLast(){
-    //Iterate to second to last, set next pointer as null.
-        ListIterator listIterator = listIterator();
-        while (listIterator.hasNext()) {
-            if (listIterator.next() == null) {
-                listIterator.remove();
+        public void addFirst(int answer) {
+            first = new Node(answer, first);
+            size++;
+            if(current == null){
+                current = first;
             }
         }
-        size--;
-    }
 
-    public void getLast(){
-        Object previous = null;
-        while(listIterator().hasNext()) {
-            if (listIterator().next() == null) {
-                previous = listIterator().previous();
+        public void addLast(int answer) {
+            Node newNode = new Node(answer);
+            if (size == 0) {
+                first = newNode;
+            } else {
+                Node temp =  first;
+                while (temp.next != null) {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
+            }
+            size++;
+        }
+
+        public void removeFirst() {
+            first.data = 0;
+            first = first.next;
+            size--;
+        }
+
+        public static void removeLast(){
+            if(first.next == null){return;}
+            else{
+                Node temp =  first;
+                while(temp.next.next != null){ //
+                    temp = temp.next;
+                }
+                temp.next = null;
+            }
+            size--;
+        }
+
+        public static void getLast(){
+            if(first == null){return;}
+            Node temp  = first;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            JOptionPane.showMessageDialog(null, "The last element of the list is " + temp.data);
+        }
+
+        public static void getFirst4(){
+            Node temp = first;
+            int i = 0;
+            while(i < 4 && temp != null){
+                System.out.print("\nNode: " + (i+1) + ": " + temp.data);
+                temp = temp.next;
+                i++;
+            }
+            if(i < 4){
+                JOptionPane.showMessageDialog(null, "This list does not contain 4 nodes, only: " + i);
             }
         }
-        System.out.println(previous);
     }
 
-    public void getFirst4(){
-        Object iter = null;
-        for(int i = 0; i < 4; i++){
-            if(listIterator().hasNext()) {
-                System.out.println(listIterator().next());
-            }
-        }
-    }
+
 
     public static void main(String[] args) {
         LinkedListDemo NumList = new LinkedListDemo();
-        JOptionPane.showInputDialog(null, "");
-        NumList.addFirst(67);
-        NumList.addFirst(72);
-        NumList.addFirst(55);
-        NumList.addFirst(78);
-        NumList.addFirst(213);
-        NumList.addLast(41);
-        NumList.removeLast();
-        NumList.getFirst4();
-        NumList.getLast();
-        System.out.println(NumList.size);
+        LinkedListDemo.LinkedListIterator iter = new LinkedListIterator();
+        JOptionPane.showMessageDialog(null, "hello");
+        iter.addFirst(67);
+        iter.addFirst(72);
+        iter.addFirst(55);
+        iter.addFirst(78);
+        iter.addFirst(213);
+        iter.addLast(41);
+        iter.removeLast();
+        iter.getFirst4();
+        iter.getLast();
+        System.out.println("\n" + size);
     }
 }
