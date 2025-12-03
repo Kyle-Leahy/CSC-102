@@ -142,7 +142,7 @@ public class LinkedListDemo {
 
     public static void main(String[] args) {
         LinkedListDemo.LinkedListIterator iter = new LinkedListIterator();
-        JOptionPane.showMessageDialog(null, "hello");
+        JOptionPane.showMessageDialog(null, "Kyle Leahy\nCSC 102\nLab 6 (hefty)");
         iter.addFirst(67);
         iter.addFirst(72);
         iter.addFirst(55);
@@ -155,7 +155,7 @@ public class LinkedListDemo {
         iter.getFirst4();
         iter.removeFirst();
         iter.removeLast();
-        System.out.println(iter.find(55));
+        System.out.println(iter.find(55)); //Only one working improperly
         System.out.println(size);
     }
 }
